@@ -1,0 +1,22 @@
+<ion-view title="Login" align-title="center">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Username</span>
+                <input ng-model="loginFrm.username" type="text" placeholder="Username">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Password</span>
+                <input ng-model="loginFrm.password" type="password" placeholder="Password">
+            </label>
+        </div>
+        <div class="login-form">
+            <br>
+            <br>
+            <button type="button" ng-click="doLogin(loginFrm)" class="button button-full button-positive login-button">Log In</button>
+            <br>
+            <br>
+            <button type="button" class="button button-full button-light forgot-password">Forgot password?</button>
+        </div>
+    </ion-content>
+</ion-view>

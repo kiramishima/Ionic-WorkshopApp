@@ -1,0 +1,20 @@
+<ion-view view-title="Home" align-title="center">
+	<ion-header-bar class="bar-royal">
+	    <h1 class="title" style="text-align: center;">Workshop</h1>
+	    <button class="button button-clear icon ion-search" ng-click="onSearch()"></button>
+	</ion-header-bar>
+
+	<ion-content>
+
+		<ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"> <!-- Recibe una funcion a ejecutar el pull -->
+		</ion-refresher>
+
+		<ion-list type="card"> <!-- Tipo Card o list-inset -->
+		  <ion-item ng-repeat="game in games" >  <!-- Objecto de la lista -->
+		    <img ng:src="{{ game.game.box.small }}" alt="" style="position: relative; float: left; padding-right: 20px;">
+		    <h2>{{game.game.name}}</h2>
+		  </ion-item>
+		</ion-list>
+
+	</ion-content>
+</ion-view>
